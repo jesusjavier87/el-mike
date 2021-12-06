@@ -65,12 +65,6 @@ export default {
       },
 
       {
-        title: "Terminos y condiciones",
-        icon: "mdi-file-document",
-        to: "/pages/profile",
-      },
-
-      {
         title: "Manual de uso",
         icon: "mdi-text-box",
         to: "/pages/tables-simple",
@@ -79,6 +73,12 @@ export default {
         title: "Contactos",
         icon: "mdi-card-account-mail",
         to: "/pages/Contacto",
+      },
+
+      {
+        title: "Informacion",
+        icon: "mdi-file-document",
+        to: "/pages/termino-ycon",
       },
     ],
   }),
