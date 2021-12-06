@@ -51,9 +51,7 @@ export default {
         icon: "mdi-view-dashboard",
         to: "/dashboard/basic-dashboard",
       },
-
       
-
       {
         title: "Agenda",
         icon: "mdi-book",

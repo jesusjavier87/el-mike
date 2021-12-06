@@ -4,7 +4,6 @@
     <!-- ----------------------------------------------------------------------------- -->
     <div>
         <v-list-item-subtitle class="text-wrap">
-        Use the <code>height</code> prop to set the height of the table.
         </v-list-item-subtitle>
         <div class="mt-4">
             <v-simple-table height="300px">
