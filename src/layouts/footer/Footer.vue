@@ -2,8 +2,7 @@
   <v-footer app color="white" class="footerpart" inset>
     <v-col cols="12">
       <span
-        >© {{ new Date().getFullYear() }} — AdminPro Admin by
-        wrappixel.com</span
+        >© {{ new Date().getFullYear() }} — DoggSys</span
       >
     </v-col>
   </v-footer>
