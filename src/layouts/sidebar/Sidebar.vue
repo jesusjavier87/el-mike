@@ -63,12 +63,6 @@ export default {
         icon: "mdi-book",
         to: "/pages/alerts",
       },
-      
-      {
-        title: "Resgistro",
-        icon: "mdi-book",
-        to: "/pages/pagar",
-      },
 
       {
         title: "Mi perfil",

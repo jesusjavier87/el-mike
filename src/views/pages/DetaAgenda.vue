@@ -13,6 +13,17 @@
             <p>fecha limite: {{ result.dtFechaCuidar }}</p>
             <p>Hora: {{ result.hora }}</p>
             <p>Tarea: {{ result.strDescripcion }}</p>
+                        <v-card-text>
+                            <h3 class="title blue-grey--text text--darken-2 font-weight-regular">Pedido #1028</h3>
+                        </v-card-text>
+                        
+                        <v-alert
+                        border="left"
+                        color="indigo"
+                        dark
+                        >
+                            Estado: Pendiente
+                        </v-alert>
           </v-card-text>
         </v-card>
       </v-col>
