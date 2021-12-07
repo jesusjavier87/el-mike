@@ -22,7 +22,7 @@
                     <td>{{ item.dtFechaCuidar }}</td>
                     <td>{{ item.hora }}</td>
                     <td>
-                      <v-btn depressed color="primary" @click="verdeta(item.id)">Ver</v-btn>
+                      <v-btn depressed color="primary" @click="verdeta(item.id)">Primary</v-btn>
                     </td>
                     </tr>
                 </tbody>

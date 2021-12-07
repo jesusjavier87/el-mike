@@ -22,31 +22,16 @@
             <h3 class="title blue-grey--text text--darken-2 font-weight-regular">Edicion de datos</h3>
             <h6 class="subtitle-2 font-weight-light">Esta seccion es para cambiar datos de perfil</h6>
           </v-card-text>
-          <v-divider></v-divider>
           <v-card-text>
-            <v-text-field
-              v-model="txtnombre"
-              label="Nombre:"
-              filled
-              background-color="transparent"
-            ></v-text-field>
-             <v-text-field
-              v-model="txtape1"
-              label="Apellido Paterno:"
-              filled
-              background-color="transparent"
-            ></v-text-field>
-            <v-text-field
-              v-model="txtape2"
-              label="Apellido Materno:"
-              filled
-              background-color="transparent"
-            ></v-text-field>
-            <div class="mt-4">
-              <v-select :items="items" filled label="Selecciona un sexo" background-color="transparent"></v-select>
-            </div>
-            <v-btn class="text-capitalize mt-5 element-0" color="success">Enviar</v-btn>
+            <p>ID: {{ result.id }}</p>
+            <p>Nombre: {{ result.firstname }}</p>
+            <p>Apellido Paterno: {{ result.lastname }}</p>
+            <p>Apellido Materno: {{ result.secondname }}</p>
+            <p>Sexo: {{ result.Sex }}</p>
+            <p>Corre: {{ result.email }}</p>
+            <p>Rol: cuidador</p>
           </v-card-text>
+          <v-btn depressed color="primary" @click="verdeta(result.id)">Editar perfil</v-btn>
         </v-card>
       </v-col>
     </v-row>
@@ -54,16 +39,20 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
-  name: "Profile",
   data: () => ({
-    txtnombre: "jesus javier",
-    txtnomtitle: "jesus javier",
-    txtape1: "pacheco",
-    txtape2: "ortiz",
-    show1: false,
-    items: ["Hombre", "Mujer"]
+    result: null
   }),
-  components: {}
+  created() {
+    axios.get("https://apipet18301044.herokuapp.com/users/75").then((result) => {
+      this.result = result.data;
+    })
+  },
+   methods: {
+    verdeta(id){
+                this.$router.push(`/pages/edit-perfil/?id=${id}`);
+            },
+  },
 };
 </script>
