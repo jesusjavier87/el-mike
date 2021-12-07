@@ -19,26 +19,11 @@ export default new Router({
                     component: () =>
                         import ('@/views/pages/Alerts'),
                 },
-
-                {
-                    name: 'Profile',
-                    path: 'pages/profile',
-                    component: () =>
-                        import ('@/views/pages/Profile'),
-                },
-
                 {
                     name: 'Icons',
                     path: 'pages/icons',
                     component: () =>
                         import ('@/views/pages/Icons'),
-                },
-
-                {
-                    name: 'TableSimple',
-                    path: 'pages/tables-simple',
-                    component: () =>
-                        import ('@/views/pages/TableSimple'),
                 },
 
                 {
@@ -54,12 +39,6 @@ export default new Router({
                         import ('@/views/pages/DateCliente'),
                 },
                 {
-                    name: 'PageChat',
-                    path: 'pages/page-chat',
-                    component: () =>
-                        import ('@/views/pages/PageChat'),
-                },
-                {
                     name: 'Mascotas',
                     path: 'pages/mascotas',
                     component: () =>
@@ -72,40 +51,16 @@ export default new Router({
                         import ('@/views/pages/DetaMascota'),
                 },
                 {
-                    name: 'Agenda',
-                    path: 'pages/agenda',
-                    component: () =>
-                        import ('@/views/pages/Agenda'),
-                },
-                {
-                    name: 'EditPerfil',
-                    path: 'pages/edit-perfil',
-                    component: () =>
-                        import ('@/views/pages/EditPerfil'),
-                },
-                {
                     name: 'TerminoYCon',
                     path: 'pages/termino-ycon',
                     component: () =>
                         import ('@/views/pages/TerminoYCon'),
                 },
                 {
-                    name: 'PagePago',
-                    path: 'pages/page-pago',
-                    component: () =>
-                        import ('@/views/pages/PagePago'),
-                },
-                {
                     name: 'DetaAgenda',
                     path: 'pages/deta-agenda',
                     component: () =>
                         import ('@/views/pages/DetaAgenda'),
-                },
-                {
-                    name: 'Perfil',
-                    path: 'pages/perfil',
-                    component: () =>
-                        import ('@/views/pages/Perfil'),
                 },
                 {
                     name: 'Chats',
