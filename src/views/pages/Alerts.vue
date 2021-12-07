@@ -23,4 +23,5 @@ export default {
       TableSimpleFixHeight: () => import('@/components/vuetifyComponents/tables-simple/TableSimpleFixHeight'),
   }
 };
+
 </script>

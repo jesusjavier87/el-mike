@@ -2,77 +2,63 @@
     <!-- ----------------------------------------------------------------------------- -->
     <!-- TableSimpleFixHeight -->
     <!-- ----------------------------------------------------------------------------- -->
-    <div>
+     <div>
         <v-list-item-subtitle class="text-wrap">
         </v-list-item-subtitle>
         <div class="mt-4">
             <v-simple-table height="300px">
+
                 <template v-slot:default>
                 <thead>
                     <tr>
+                    <th class="text-left">Id</th>
                     <th class="text-left">Name</th>
-                    <th class="text-left">Calories</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="item in desserts" :key="item.name">
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.calories }}</td>
+                    <tr>
+                    <td>1</td>
+                    <td>2</td>
                     </tr>
                 </tbody>
                 </template>
+
             </v-simple-table>
         </div>
     </div>
 </template>
+ 
+ 
+ 
 
 <script>
+import axios from "axios";
 export default {
-  name: "TableSimpleFixHeight",
-
+  name: "Current",
   data: () => ({
-    desserts: [
-          {
-            name: 'Frozen Yogurt',
-            calories: 159,
-          },
-          {
-            name: 'Ice cream sandwich',
-            calories: 237,
-          },
-          {
-            name: 'Eclair',
-            calories: 262,
-          },
-          {
-            name: 'Cupcake',
-            calories: 305,
-          },
-          {
-            name: 'Gingerbread',
-            calories: 356,
-          },
-          {
-            name: 'Jelly bean',
-            calories: 375,
-          },
-          {
-            name: 'Lollipop',
-            calories: 392,
-          },
-          {
-            name: 'Honeycomb',
-            calories: 408,
-          },
-          {
-            name: 'Donut',
-            calories: 452,
-          },
-          {
-            name: 'KitKat',
-            calories: 518,
-          },
-        ],
-  })
+    items: ["albums", "todos", "posts"],
+    selected: "",
+
+    headers: [
+      { text: "ID", value: "id" },
+      { text: "firstname", value: "firstname" },
+    ],
+    data:[],
+  }),
+
+  methods: {
+    getData() {
+      axios
+        .get("https://apipet18301044.herokuapp.com/users" + this.selected ,{dataType: "json"})
+        .then((response) => { this.data = response.data;})
+        .catch((err) => alert(err));
+    },
+  },
+
+  mounted() {
+    this.getData();
+  }
+
 };
 </script>
+ 
