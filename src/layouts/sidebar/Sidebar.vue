@@ -63,18 +63,6 @@ export default {
         icon: "mdi-badge-account",
         to: "/pages/icons",
       },
-
-      {
-        title: "Manual de uso",
-        icon: "mdi-text-box",
-        to: "/pages/tables-simple",
-      },
-      {
-        title: "Contactos",
-        icon: "mdi-card-account-mail",
-        to: "/pages/Contacto",
-      },
-
       {
         title: "Informacion",
         icon: "mdi-file-document",
