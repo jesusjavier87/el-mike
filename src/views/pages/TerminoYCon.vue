@@ -5,32 +5,59 @@
             <v-col cols="12" lg="8">
                 <v-card>
                     <v-card-text>
-                        <h3 class="title blue-grey--text text--darken-2 font-weight-regular">Edicion de datos</h3>
-                        <h6 class="subtitle-2 font-weight-light">Esta seccion es para cambiar datos de perfil</h6>
+                        <h1 class="title blue-grey--text text--darken-2 font-weight-regular">Informacion Detallada</h1>
                     </v-card-text>
                     <v-card-text>
-                        <v-text-field
-                            v-model="txtnombre"
-                            label="Nombre:"
-                            filled
-                            background-color="transparent"
-                        ></v-text-field>
-                        <v-text-field
-                            v-model="txtape1"
-                            label="Apellido Paterno:"
-                            filled
-                            background-color="transparent"
-                        ></v-text-field>
-                        <v-text-field
-                            v-model="txtape2"
-                            label="Apellido Materno:"
-                            filled
-                            background-color="transparent"
-                        ></v-text-field>
-                        <div class="mt-4">
-                            <v-select :items="items" filled label="Selecciona un sexo" background-color="transparent"></v-select>
-                        </div>
-                        <v-btn class="text-capitalize mt-5 element-0" color="success">Enviar</v-btn>
+                        <v-card-text>
+                            <h3 class="title blue-grey--text text--darken-2 font-weight-regular">Terminos y Condiciones</h3>
+                        </v-card-text>
+                        
+                        <v-alert
+                        border="left"
+                        color="indigo"
+                        dark
+                        >
+                            Ver terminos y condiciones: 
+                            <a 
+                            alink="#ffffcc"
+                            href="https://drive.google.com/file/d/11A1YpVJoZV5C8iTAz7nL1SjcZ1FrzawD/view?usp=sharing">
+                            click
+                            </a>
+                        </v-alert>
+                    </v-card-text>
+                    <v-card-text>
+                        <v-card-text>
+                            <h3 class="title blue-grey--text text--darken-2 font-weight-regular">Manual de usuario</h3>
+                        </v-card-text>
+                        
+                        <v-alert
+                        border="left"
+                        color="indigo"
+                        dark
+                        >
+                            Manual de usuario: 
+                            <a 
+                            alink="#ffffcc"
+                            href="https://drive.google.com/file/d/1FdOgJEmsp_4kjHcNowcProupS_bIVaD5/view?usp=sharing">
+                            click
+                            </a>
+                        </v-alert>
+                    </v-card-text>
+                    <v-card-text>
+                        <v-card-text>
+                            <h3 class="title blue-grey--text text--darken-2 font-weight-regular">Contacto</h3>
+                        </v-card-text>
+                        
+                        <v-alert
+                        border="left"
+                        color="indigo"
+                        dark
+                        >
+                        <p>Para mayor informacion comuniquese al siguiente email:</p>
+                        <p>18301044@uttt.edu.mx</p>
+                        <p>Telefono:</p>
+                        <p>3319259648</p>
+                        </v-alert>
                     </v-card-text>
                 </v-card>
             </v-col>
