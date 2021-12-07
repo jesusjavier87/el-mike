@@ -14,6 +14,18 @@
             <p>Hora: {{ result.hora }}</p>
             <p>Tarea: {{ result.strDescripcion }}</p>
           </v-card-text>
+           <v-row align="center" justify="space-around">
+      <v-btn
+        tile
+        color="success"
+        @click="regreso"
+      >
+        <v-icon left>
+          mdi-arrow-left-bold-circle
+        </v-icon>
+        Regresar
+      </v-btn>
+    </v-row>
         </v-card>
       </v-col>
   </v-container>
@@ -29,6 +41,11 @@ export default {
     axios.get("https://apipet18301044.herokuapp.com/agendar/"+this.$route.query.id).then((result) => {
       this.result = result.data;
     })
-  }
+},
+ methods: {
+    regreso(){
+                this.$router.push(`/pages/alerts`);
+            },
+  },
 };
 </script>

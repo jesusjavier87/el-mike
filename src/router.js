@@ -67,7 +67,25 @@ export default new Router({
                     path: 'pages/chats',
                     component: () =>
                         import ('@/views/pages/Chats'),
-                }
+                },
+                {
+                    name: 'Login',
+                    path: 'pages/login',
+                    component: () =>
+                        import ('@/views/pages/Login'),
+                },
+                {
+                    name: 'registro',
+                    path: 'pages/registro',
+                    component: () =>
+                        import ('@/views/pages/registro'),
+                },
+                {
+                    name: 'RePass',
+                    path: 'pages/repass',
+                    component: () =>
+                        import ('@/views/pages/RePass'),
+                },
             ]
         },
 
