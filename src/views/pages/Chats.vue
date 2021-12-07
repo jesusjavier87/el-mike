@@ -1,10 +1,36 @@
 <template>
   <v-container fluid style="padding: 0;">
     <v-row no-gutters>
-      <v-col sm="2" class="scrollable">
-        <chats></chats>
+      <v-col sm="10" v-if="mostrar==false" class="scrollable">
+        <v-card
+          elevation="2"
+          shaped
+          tile
+        >
+          <h3 class="title blue-grey--text text--darken-2 font-weight-regular">Chat</h3>
+          <v-row  > 
+            <v-col  cols="12"
+                    md="12"
+                    >
+              <v-card
+                elevation="2"
+                shaped
+                tile
+              >
+                <h3 class="title blue-grey--text text--darken-2 font-weight-regular">Selena</h3>
+                <p class="title blue-grey--text text--darken-2 font-weight-regular">12/11/21</p>
+                <v-btn @click="mostrar = true">
+                  Ver chat
+                </v-btn>
+              </v-card>
+            </v-col >
+          </v-row>
+        </v-card>
       </v-col>
-      <v-col sm="10" style="position: relative;">
+      
+      <v-col
+        v-if="mostrar==true"
+        sm="10" style="position: relative;">
         <div class="chat-container" v-on:scroll="onScroll" ref="chatContainer" >
           <message :messages="messages" @imageLoad="scrollToEnd"></message>
         </div>
@@ -14,14 +40,25 @@
           <v-btn icon class="blue--text emoji-panel" @click="toggleEmojiPanel">
             <v-icon>mdi-emoticon-outline</v-icon>
           </v-btn>
+          
         </div>
+      </v-col>
+      <v-col v-if="mostrar==true">
+        <v-btn @click="mostrar = false">
+                  volver
+        </v-btn>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
+export default {
+  data: () => ({
+    mostrar: false
+  }),
   
+  };
 </script>
 
 <style>
