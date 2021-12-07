@@ -53,6 +53,12 @@ export default {
       },
       
       {
+        title: "Chats",
+        icon: "mdi-email",
+        to: "/pages/chats",
+      },
+      
+      {
         title: "Agenda",
         icon: "mdi-book",
         to: "/pages/alerts",

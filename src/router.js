@@ -106,6 +106,12 @@ export default new Router({
                     path: 'pages/perfil',
                     component: () =>
                         import ('@/views/pages/Perfil'),
+                },
+                {
+                    name: 'Chats',
+                    path: 'pages/chats',
+                    component: () =>
+                        import ('@/views/pages/Chats'),
                 }
             ]
         },
