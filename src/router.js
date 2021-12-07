@@ -67,6 +67,12 @@ export default new Router({
                     path: 'pages/chats',
                     component: () =>
                         import ('@/views/pages/Chats'),
+                },
+                {
+                    name: 'Pagar',
+                    path: 'pages/pagar',
+                    component: () =>
+                        import ('@/views/pages/pagar'),
                 }
             ]
         },
