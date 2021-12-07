@@ -69,6 +69,7 @@ export default new Router({
                         import ('@/views/pages/Chats'),
                 },
                 {
+<<<<<<< HEAD
                     name: 'Login',
                     path: 'pages/login',
                     component: () =>
@@ -86,6 +87,13 @@ export default new Router({
                     component: () =>
                         import ('@/views/pages/RePass'),
                 },
+=======
+                    name: 'Pagar',
+                    path: 'pages/pagar',
+                    component: () =>
+                        import ('@/views/pages/pagar'),
+                }
+>>>>>>> 83095d1fa9183dfdee7d7964e51853656edccffa
             ]
         },
 
