@@ -24,12 +24,12 @@
           </v-card-text>
           <v-card-text>
             <p>ID: {{ result.id }}</p>
-            <p>Nombre: {{ result.firstname }}</p>
-            <p>Apellido Paterno: {{ result.lastname }}</p>
-            <p>Apellido Materno: {{ result.secondname }}</p>
-            <p>Sexo: {{ result.Sex }}</p>
-            <p>Corre: {{ result.email }}</p>
-            <p>Rol: cuidador</p>
+            <p>Nombre</p>
+            <v-text-field v-model="nombre"></v-text-field>
+            <p>Apellido Paterno:</p>
+            <v-text-field v-model="APeterno"></v-text-field>
+            <p>Apellido Materno:</p>
+             <v-text-field v-model="AMaterno"></v-text-field>
           </v-card-text>
           <v-row align="center" justify="space-around">
               <v-btn color="success"  @click="verdeta(result.id)"><v-icon left>mdi-pencil</v-icon>Guardar</v-btn>
@@ -45,20 +45,39 @@
 import axios from "axios";
 export default {
   data: () => ({
-    result: null
+     result: null,
   }),
   created() {
     axios.get("https://apipet18301044.herokuapp.com/users/75").then((result) => {
       this.result = result.data;
-    })
+      this.nombre = result.data.firstname,
+      this.APeterno = result.data.lastname,
+      this.AMaterno = result.data.secondname
+    });
+    let post = {
+    id: this.$route.query.id,
+    firstname: this.result.lastname ,
+    lastname: 'pacheco',
+    secondname: 'ortiz',
+    Sex: 'Hombre',
+    email: '18300496@uttt.edu.mx',
+    password: 'Pentium876!',
+    token: 'ff971215faa69ff344dd854c44ec418af86677d2',
+    catRolId: 2,
+  };
+  axios.put("https://apipet18301044.herokuapp.com/users/75", post).then((result) => {
+    console.log(result);
+  });
   },
    methods: {
     verdeta(id){
                 this.$router.push(`/pages/icons/?id=${id}`);
+                //funsion put
             },
     regreso(){
                 this.$router.push(`/pages/icons/`);
             },
+            
   },
 };
 </script>
